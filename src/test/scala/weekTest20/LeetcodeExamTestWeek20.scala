@@ -5,6 +5,7 @@ import week20.KnightDialer
 import week22.{Add2Num, ListNode}
 import week24._
 import week26._
+import week27._
 
 import scala.io.Source
 
@@ -168,6 +169,64 @@ class LeetcodeExamTestWeek20 extends FunSuite {
     assert(RegExpSolution.isMatch("aab", "c*a*b") == true)
     assert(RegExpSolution.isMatch("mississippi", "mis*is*p*.") == false)
     assert(RegExpSolution.isMatch("mississippi", "mis*is*ip*.") == true)
+  }
+
+  test("Merge k Sorted Lists") {
+    val l0 = new week27.ListNode(1)
+    val l1 = new week27.ListNode(4)
+    val l2 = new week27.ListNode(5)
+    l0.next = l1
+    l1.next = l2
+    val m0 = new week27.ListNode(1)
+    val m1 = new week27.ListNode(3)
+    val m2 = new week27.ListNode(4)
+    m0.next = m1
+    m1.next = m2
+    val r0 = new week27.ListNode(2)
+    val r1 = new week27.ListNode(6)
+    r0.next = r1
+    //MergeSortedListSolution.mergeKLists(Array(l0,m0,r0))
+    MergeSortedListSolution.mergeKLists(Array.empty)
+  }
+
+  test("Merge Sorted Array") {
+    //Merge2SortedIntArrSolution.merge(Array(1, 2, 3, 0, 0, 0), 3, Array(2, 5, 6), 3)
+    // val t0 = Merge2SortedIntArrSolution.merge(Array(1, 2, 4, 5, 6, 0), 5, Array(3), 1)
+    //print(t0)
+    /**
+      *
+      * [0,0,3,0,0,0,0,0,0]
+      * 3
+      * [-1,1,1,1,2,3]
+      * 6
+      */
+    Merge2SortedIntArrSolution.merge(Array(2, 0), 1, Array(1), 1)
+  }
+
+  test("Sort List") {
+    val l0 = new week27.ListNode(4)
+    val l1 = new week27.ListNode(2)
+    val l2 = new week27.ListNode(1)
+    val l3 = new week27.ListNode(3)
+    l0.next = l1
+    l1.next = l2
+    l2.next = l3
+    InsertionSortWithLinkedSolution.insertionSortList(l0)
+
+    //    val l0 = new week27.ListNode(-1)
+    //    val l1 = new week27.ListNode(5)
+    //    val l2 = new week27.ListNode(3)
+    //    val l3 = new week27.ListNode(4)
+    //    val l4 = new week27.ListNode(0)
+    //    l0.next = l1
+    //    l1.next = l2
+    //    l2.next = l3
+    //    l3.next = l4
+    //    InsertionSortWithLinkedSolution.insertionSortList(l0)
+  }
+
+  test("sort color") {
+    SortColorSolution.sortColors(Array(2,2))
   }
 
 }
