@@ -37,6 +37,7 @@ object SortColorSolution {
           swap(nums, mid, right)
           right -= 1
         }
+        "1231".contains("12")
       }
     }
 

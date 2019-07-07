@@ -226,7 +226,13 @@ class LeetcodeExamTestWeek20 extends FunSuite {
   }
 
   test("sort color") {
-    SortColorSolution.sortColors(Array(2,2))
+    SortColorSolution.sortColors(Array(2, 2))
+  }
+
+  test("Longest Common Prefix") {
+//    LongestCommonPrefixSolution.longestCommonPrefix(Array("flower", "flow", "flight"))
+//    LongestCommonPrefixSolution.longestCommonPrefix(Array("c", "c"))
+    LongestCommonPrefixSolution.longestCommonPrefix(Array("", ""))
   }
 
 }
