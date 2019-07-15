@@ -5,7 +5,7 @@ import week20.KnightDialer
 import week22.{Add2Num, ListNode}
 import week24._
 import week26._
-import week27.{HappyNumSolution, Int2RomanSolution, StockSellSolution, UglyNumSolution}
+import week27.{HappyNumSolution, InsertionSortWithLinkedSolution, Int2RomanSolution, LongestCommonPrefixSolution, Merge2SortedIntArrSolution, MergeSortedListSolution, SortColorSolution, StockSellSolution, UglyNumSolution}
 
 import scala.io.Source
 
