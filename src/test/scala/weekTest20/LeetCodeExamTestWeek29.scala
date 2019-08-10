@@ -3,6 +3,7 @@ package weekTest20
 import org.scalatest.FunSuite
 import week27.ListNode
 import week29._
+import week30.{RemoveDuplicateFromSortedSolution, SundayStrStrSolution}
 
 /**
   * @author tang
@@ -75,6 +76,17 @@ class LeetCodeExamTestWeek29 extends FunSuite {
     t2.right = t6
     t4.right = t7
     println(PrintBTreeSolution.printTree(t0))
+  }
+
+  test("Remove Duplicates from Sorted Array") {
+    RemoveDuplicateFromSortedSolution.removeDuplicates(Array(0, 0, 1, 1, 1, 2, 2, 3, 3, 4))
+  }
+
+  test("Implement strStr()") {
+    assert(SundayStrStrSolution.strStr("hello", "ll") == 2)
+    assert(SundayStrStrSolution.strStr("ababababc", "abababc") == 2)
+    assert(SundayStrStrSolution.strStr("aaaaa", "bba") == -1)
+    assert(SundayStrStrSolution.strStr("aabaaabaaac", "aabaaac") == 4)
   }
 
 }
