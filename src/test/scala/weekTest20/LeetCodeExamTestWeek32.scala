@@ -4,6 +4,7 @@ package weekTest20
 import org.scalatest.FunSuite
 import week29.TreeNode
 import week32._
+import week33.{CombinationSum, CombinationSum3, FirstMissPositive}
 
 /**
   * @author tang
@@ -159,32 +160,52 @@ class LeetCodeExamTestWeek32 extends FunSuite {
   }
 
   test("37. Sudoku Solver") {
-//    val board = Array(
-//      Array("5", "3", ".", ".", "7", ".", ".", ".", "."),
-//      Array("6", ".", ".", "1", "9", "5", ".", ".", "."),
-//      Array(".", "9", "8", ".", ".", ".", ".", "6", "."),
-//      Array("8", ".", ".", ".", "6", ".", ".", ".", "3"),
-//      Array("4", ".", ".", "8", ".", "3", ".", ".", "1"),
-//      Array("7", ".", ".", ".", "2", ".", ".", ".", "6"),
-//      Array(".", "6", ".", ".", ".", ".", "2", "8", "."),
-//      Array(".", ".", ".", "4", "1", "9", ".", ".", "5"),
-//      Array(".", ".", ".", ".", "8", ".", ".", "7", "9")
-//    )
+    //    val board = Array(
+    //      Array("5", "3", ".", ".", "7", ".", ".", ".", "."),
+    //      Array("6", ".", ".", "1", "9", "5", ".", ".", "."),
+    //      Array(".", "9", "8", ".", ".", ".", ".", "6", "."),
+    //      Array("8", ".", ".", ".", "6", ".", ".", ".", "3"),
+    //      Array("4", ".", ".", "8", ".", "3", ".", ".", "1"),
+    //      Array("7", ".", ".", ".", "2", ".", ".", ".", "6"),
+    //      Array(".", "6", ".", ".", ".", ".", "2", "8", "."),
+    //      Array(".", ".", ".", "4", "1", "9", ".", ".", "5"),
+    //      Array(".", ".", ".", ".", "8", ".", ".", "7", "9")
+    //    )
     val board = Array(
       Array(".", ".", ".", "2", ".", ".", ".", "6", "3"),
       Array("3", ".", ".", ".", ".", "5", "4", ".", "1"),
       Array(".", ".", "1", ".", ".", "3", "9", "8", "."),
       Array(".", ".", ".", ".", ".", ".", ".", "9", "."),
       Array(".", ".", ".", "5", "3", "8", ".", ".", "."),
-      Array(".","3",".",".",".",".",".",".","."),
-      Array(".","2","6","3",".",".","5",".","."),
-      Array("5",".","3","7",".",".",".",".","8"),
-      Array("4","7",".",".",".","1",".",".",".")
+      Array(".", "3", ".", ".", ".", ".", ".", ".", "."),
+      Array(".", "2", "6", "3", ".", ".", "5", ".", "."),
+      Array("5", ".", "3", "7", ".", ".", ".", ".", "8"),
+      Array("4", "7", ".", ".", ".", "1", ".", ".", ".")
     )
     val transform = board.map(_.map(_.charAt(0)))
     new SolveSudoku(transform).solveSudoku()
     //    SolveSudoku.solveSudoku(board.map(_.map(_.charAt(0))))
     println(transform.map(_.toList).toList)
+  }
+
+  test("39. Combination Sum") {
+    //    println(CombinationSum.combinationSum(Array(2, 3, 6, 7), 7))
+    //    println(CombinationSum.combinationSum(Array(2, 3, 5, 7), 8))
+    //    println(CombinationSum.combinationSum(Array(3, 5, 7), 9))
+    //    println(CombinationSum.combinationSum(Array(8, 7, 4, 3), 11))
+    println(CombinationSum.combinationSum(Array(10, 1, 2, 7, 6, 1, 5), 8))
+  }
+
+  test("216. Combination Sum III") {
+    println(CombinationSum3.combinationSum3(3, 7))
+    println(CombinationSum3.combinationSum3(3, 9))
+  }
+
+  test("41. First Missing Positive") {
+//    assert(FirstMissPositive.firstMissingPositive(Array(1, 2, 0)) == 3)
+//    assert(FirstMissPositive.firstMissingPositive(Array(3, 4, -1, 1)) == 2)
+//    assert(FirstMissPositive.firstMissingPositive(Array(7, 8, 9, 11, 12)) == 1)
+    assert(FirstMissPositive.firstMissingPositive(Array(0,2,2,4,0,1,0,1,3)) == 5)
   }
 
 }
