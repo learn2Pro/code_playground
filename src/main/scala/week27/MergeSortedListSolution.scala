@@ -3,8 +3,6 @@ package week27
 /**
   * Created by Administrator on 2019/7/6 0006.
   */
-
-
 class ListNode(var _x: Int = 0) {
   var next: ListNode = null
   var x: Int = _x
