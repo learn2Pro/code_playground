@@ -6,7 +6,7 @@ package week22
   */
 class ListNode(var _x: Int = 0) {
   var next: ListNode = null
-  var x: Int = _x
+  var x   : Int      = _x
 }
 
 object Add2Num {
