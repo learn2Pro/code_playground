@@ -87,4 +87,36 @@ class LeetCodeExamTestWeek39 extends FunSuite {
     println(lru.get(2))
   }
   
+  test("149. Max Points on a Line") {
+    assert(MaxPointsOnLine.maxPoints(Array(Array(1, 1), Array(2, 2), Array(3, 3))) == 3)
+    assert(MaxPointsOnLine.maxPoints(Array(
+      Array(1, 1), Array(3, 2), Array(5, 3),
+      Array(4, 1), Array(2, 3), Array(1, 4))
+    ) == 4)
+    assert(MaxPointsOnLine.maxPoints(Array(Array(0, 0))) == 1)
+    assert(MaxPointsOnLine.maxPoints(Array(Array(0, 0), Array(1, 65536), Array(65536, 0))) == 2)
+    assert(MaxPointsOnLine.maxPoints(Array(
+      Array(84, 250), Array(0, 0), Array(1, 0), Array(0, -70), Array(0, -70),
+      Array(1, -1), Array(21, 10), Array(42, 90), Array(-42, -230))) == 6)
+  }
+  
+  test("150. Evaluate Reverse Polish Notation") {
+    assert(RPNEvaluator.evalRPN(Array("2", "1", "+", "3", "*")) == 9)
+    assert(RPNEvaluator.evalRPN(Array("4", "13", "5", "/", "+")) == 6)
+    assert(RPNEvaluator.evalRPN(Array("10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+")) == 22)
+  }
+  
+  test("151. Reverse Words in a String") {
+    assert(ReverseWordsInString.reverseWords("the sky is blue") == "blue is sky the")
+    assert(ReverseWordsInString.reverseWords("  hello world!  ") == "world! hello")
+    assert(ReverseWordsInString.reverseWords("a good   example") == "example good a")
+  }
+  
+  test("152. Maximum Product Subarray") {
+    //    assert(MaxProduct.maxProduct(Array(2, 3, -2, 4)) == 6)
+    //    assert(MaxProduct.maxProduct(Array(-2, 0, -1)) == 0)
+    //    assert(MaxProduct.maxProduct(Array(-2, 3, -4)) == 24)
+    assert(MaxProduct.maxProduct(Array(-4, -3, -2)) == 12)
+  }
+  
 }
