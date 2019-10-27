@@ -1,8 +1,8 @@
 package weekTest20
 
 import org.scalatest.FunSuite
-import week34._
-import week35.JumpGameII
+import category.time.week34._
+import category.time.week35.JumpGameII
 
 /**
   * @author tang

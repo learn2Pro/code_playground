@@ -1,16 +1,16 @@
 # code_playground
 code_playground
-week20:1
-week22:1
-week24:6
-week26:8
-week27:12
-week28:13
-week29:7
-week30:4
-week31:6
-week32:13
-week33:3
-week34:5
+category.time.week20:1
+category.time.week22:1
+category.time.week24:6
+category.time.week26:8
+category.time.week27:12
+category.time.week28:13
+category.time.week29:7
+category.time.week30:4
+category.time.week31:6
+category.time.week32:13
+category.time.week33:3
+category.time.week34:5
 
 TOTAL:79

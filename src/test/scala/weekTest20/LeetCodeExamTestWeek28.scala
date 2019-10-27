@@ -1,7 +1,7 @@
 package weekTest20
 
 import org.scalatest.FunSuite
-import week28._
+import category.time.week28._
 
 /**
   * @author tang
@@ -45,18 +45,18 @@ class LeetCodeExamTestWeek28 extends FunSuite {
   }
 
   test("Remove Nth Node From End of List") {
-    //    val l0 = new week27.ListNode(1)
-    //    val l1 = new week27.ListNode(2)
-    //    val l2 = new week27.ListNode(3)
-    //    val l3 = new week27.ListNode(4)
-    //    val l4 = new week27.ListNode(5)
+    //    val l0 = new category.time.week27.ListNode(1)
+    //    val l1 = new category.time.week27.ListNode(2)
+    //    val l2 = new category.time.week27.ListNode(3)
+    //    val l3 = new category.time.week27.ListNode(4)
+    //    val l4 = new category.time.week27.ListNode(5)
     //    l0.next = l1
     //    l1.next = l2
     //    l2.next = l3
     //    l3.next = l4
     //    RemoveNthBackNodeSolution.removeNthFromEnd(l0, 2)
 
-    val l0 = new week27.ListNode(1)
+    val l0 = new category.time.week27.ListNode(1)
     RemoveNthBackNodeSolution.removeNthFromEnd(l0, 1)
   }
 

@@ -1,8 +1,8 @@
 package weekTest20
 
 import org.scalatest.FunSuite
-import week31._
-import week32.ConcatenationOfAllWordsV2Solution
+import category.time.week31._
+import category.time.week32.ConcatenationOfAllWordsV2Solution
 
 /**
   * @author tang

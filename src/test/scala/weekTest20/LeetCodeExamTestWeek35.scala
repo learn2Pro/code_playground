@@ -1,9 +1,9 @@
 package weekTest20
 
 import org.scalatest.FunSuite
-import week27.ListNode
-import week35.RotateImage
-import week36._
+import category.time.week27.ListNode
+import category.time.week35.RotateImage
+import category.time.week36._
 
 /**
   * @author tang

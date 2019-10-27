@@ -1,9 +1,9 @@
 package weekTest20
 
 import org.scalatest.FunSuite
-import week27.ListNode
-import week29._
-import week30.{RemoveDuplicateFromSortedSolution, SundayStrStrSolution}
+import category.time.week27.ListNode
+import category.time.week29._
+import category.time.week30.{RemoveDuplicateFromSortedSolution, SundayStrStrSolution}
 
 /**
   * @author tang
