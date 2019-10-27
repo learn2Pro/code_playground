@@ -2,7 +2,7 @@ package weekTest20
 
 import org.scalatest.FunSuite
 import week41.{IntersectionOfTwoList, ListNode, MaximumGap, VersionComparison}
-import week42._
+import week42.{NumberOfOneBit, _}
 
 /**
   * @author tang
@@ -85,6 +85,48 @@ class LeetCodeExamTestWeek41 extends FunSuite {
     assert(DigitOneSize.countDigitOne(99) == 20)
     assert(DigitOneSize.countDigitOne(999) == 300)
     assert(DigitOneSize.countDigitOne(9999) == 4000)
+  }
+  
+  test("174. Dungeon Game") {
+    assert(DungeonGame.calculateMinimumHP(Array(Array(-2, -3, 3), Array(-5, -10, 1), Array(10, 30, -5))) == 7)
+  }
+  
+  test("741. Cherry Pickup") {
+    //    assert(CherryPickUp.cherryPickup(Array(Array(0, 1, -1), Array(1, 0, -1), Array(1, 1, 1))) == 5)
+    //    assert(CherryPickUp.cherryPickup(Array(Array(1, 1, -1), Array(1, -1, 1), Array(-1, 1, 1))) == 0)
+    //    assert(CherryPickUp.cherryPickup(Array(
+    //      Array(1, 1, 1, 1, 0, 0, 0),
+    //      Array(0, 0, 0, 1, 0, 0, 0),
+    //      Array(0, 0, 0, 1, 0, 0, 1),
+    //      Array(1, 0, 0, 1, 0, 0, 0),
+    //      Array(0, 0, 0, 1, 0, 0, 0),
+    //      Array(0, 0, 0, 1, 0, 0, 0),
+    //      Array(0, 0, 0, 1, 1, 1, 1)
+    //    )) == 15)
+    
+    /**
+      * [[1,-1,-1,-1,-1],[1,0,1,-1,-1],[0,-1,1,0,1],[1,0,1,1,0],[-1,-1,-1,1,1]]
+      */
+    assert(CherryPickUp.cherryPickup(Array(
+      Array(1, -1, -1, -1, -1),
+      Array(1, 0, 1, -1, -1),
+      Array(0, -1, 1, 0, 1),
+      Array(1, 0, 1, 1, 0),
+      Array(-1, -1, -1, 1, 1)
+    )) == 10)
+  }
+  
+  test("179. Largest Number") {
+    assert(LargestNumber.largestNumber(Array(10, 2)) == "210")
+    assert(LargestNumber.largestNumber(Array(3, 30, 34, 5, 9)) == "9534330")
+    assert(LargestNumber.largestNumber(Array(9, 98, 1)) == "9981")
+    assert(LargestNumber.largestNumber(Array(121, 12)) == "12121")
+  }
+  
+  test("191. Number of 1 Bits") {
+    val task = new NumberOfOneBit
+    assert(task.hammingWeight(7) == 3)
+    assert(task.hammingWeight(5) == 2)
   }
   
 }
