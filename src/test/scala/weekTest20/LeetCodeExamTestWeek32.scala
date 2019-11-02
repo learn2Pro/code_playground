@@ -2,9 +2,9 @@ package weekTest20
 
 
 import org.scalatest.FunSuite
-import category.time.week29.TreeNode
-import category.time.week32._
-import category.time.week33.{CombinationSum, CombinationSum3, FirstMissPositive}
+import category.timeline.week29.TreeNode
+import category.timeline.week32._
+import category.timeline.week33.{CombinationSum, CombinationSum3, FirstMissPositive}
 
 /**
   * @author tang

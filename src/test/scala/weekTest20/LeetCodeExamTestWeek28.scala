@@ -1,7 +1,7 @@
 package weekTest20
 
 import org.scalatest.FunSuite
-import category.time.week28._
+import category.timeline.week28._
 
 /**
   * @author tang
@@ -56,7 +56,7 @@ class LeetCodeExamTestWeek28 extends FunSuite {
     //    l3.next = l4
     //    RemoveNthBackNodeSolution.removeNthFromEnd(l0, 2)
 
-    val l0 = new category.time.week27.ListNode(1)
+    val l0 = new category.timeline.week27.ListNode(1)
     RemoveNthBackNodeSolution.removeNthFromEnd(l0, 1)
   }
 

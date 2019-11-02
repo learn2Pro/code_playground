@@ -1,7 +1,7 @@
-package category.time.week38
+package category.timeline.week38
 
 import org.scalatest.FunSuite
-import category.time.week29.TreeNode
+import category.timeline.week29.TreeNode
 
 /**
   * @author tang
@@ -25,48 +25,48 @@ class LeetCodeExamTestWeek38 extends FunSuite {
   
   test("116. Populating Next Right Pointers in Each Node") {
     val populate = new PopulateNextNode
-    val r0 = new category.time.week38.Node()
+    val r0 = new category.timeline.week38.Node()
     r0.`val` = 6
-    val r1 = new category.time.week38.Node()
+    val r1 = new category.timeline.week38.Node()
     r1.`val` = 7
-    val r2 = new category.time.week38.Node()
+    val r2 = new category.timeline.week38.Node()
     r2.`val` = 8
-    val r3 = new category.time.week38.Node()
+    val r3 = new category.timeline.week38.Node()
     r3.`val` = 9
-    val r4 = new category.time.week38.Node()
+    val r4 = new category.timeline.week38.Node()
     r4.`val` = 10
-    val r5 = new category.time.week38.Node()
+    val r5 = new category.timeline.week38.Node()
     r5.`val` = 11
-    val r6 = new category.time.week38.Node()
+    val r6 = new category.timeline.week38.Node()
     r6.`val` = 12
-    val r7 = new category.time.week38.Node()
+    val r7 = new category.timeline.week38.Node()
     r7.`val` = 13
-    val r8 = new category.time.week38.Node(2, r0, r1, null)
-    val r9 = new category.time.week38.Node(3, r2, r3, null)
-    val r10 = new category.time.week38.Node(4, r4, r5, null)
-    val r11 = new category.time.week38.Node(5, r6, r7, null)
-    val r12 = new category.time.week38.Node(0, r8, r9, null)
-    val r13 = new category.time.week38.Node(1, r10, r11, null)
-    val r14 = new category.time.week38.Node(1, r12, r13, null)
+    val r8 = new category.timeline.week38.Node(2, r0, r1, null)
+    val r9 = new category.timeline.week38.Node(3, r2, r3, null)
+    val r10 = new category.timeline.week38.Node(4, r4, r5, null)
+    val r11 = new category.timeline.week38.Node(5, r6, r7, null)
+    val r12 = new category.timeline.week38.Node(0, r8, r9, null)
+    val r13 = new category.timeline.week38.Node(1, r10, r11, null)
+    val r14 = new category.timeline.week38.Node(1, r12, r13, null)
     populate.connect(r14)
     println("end")
   }
   
   test("117. Populating Next Right Pointers in Each Node II") {
-    val r0 = new category.time.week38.Node()
+    val r0 = new category.timeline.week38.Node()
     r0.`val` = 5
-    val r1 = new category.time.week38.Node()
+    val r1 = new category.timeline.week38.Node()
     r1.`val` = 1
-    val r2 = new category.time.week38.Node()
+    val r2 = new category.timeline.week38.Node()
     r2.`val` = 6
-    val r3 = new category.time.week38.Node()
+    val r3 = new category.timeline.week38.Node()
     r3.`val` = 8
-    val r4 = new category.time.week38.Node(1, r0, r1, null)
-    val r5 = new category.time.week38.Node(3, null, r2, null)
-    val r6 = new category.time.week38.Node(-1, null, r3, null)
-    val r7 = new category.time.week38.Node(2, r4, null, null)
-    val r8 = new category.time.week38.Node(4, r5, r6, null)
-    val r9 = new category.time.week38.Node(0, r7, r8, null)
+    val r4 = new category.timeline.week38.Node(1, r0, r1, null)
+    val r5 = new category.timeline.week38.Node(3, null, r2, null)
+    val r6 = new category.timeline.week38.Node(-1, null, r3, null)
+    val r7 = new category.timeline.week38.Node(2, r4, null, null)
+    val r8 = new category.timeline.week38.Node(4, r5, r6, null)
+    val r9 = new category.timeline.week38.Node(0, r7, r8, null)
     val populate = new PopulateNextNodeII
     val ans = populate.connect(r9)
     println("end")

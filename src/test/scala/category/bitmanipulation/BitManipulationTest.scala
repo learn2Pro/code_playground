@@ -61,4 +61,17 @@ class BitManipulationTest extends FunSuite {
     assert(MaximumXOR.findMaximumXOR(Array(3, 10, 5, 25, 2, 8)) == 28)
   }
   
+  test("477. Total Hamming Distance") {
+    assert(TotalHammingDistance.totalHammingDistance(Array(4, 14, 2)) == 6)
+  }
+  
+  test("693. Binary Number with Alternating Bits") {
+    assert(AlternatingBits.hasAlternatingBits(1) == true)
+    assert(AlternatingBits.hasAlternatingBits(5) == true)
+    assert(AlternatingBits.hasAlternatingBits(7) == false)
+    assert(AlternatingBits.hasAlternatingBits(11) == false)
+    assert(AlternatingBits.hasAlternatingBits(10) == true)
+    assert(AlternatingBits.hasAlternatingBits(4) == false)
+  }
+  
 }

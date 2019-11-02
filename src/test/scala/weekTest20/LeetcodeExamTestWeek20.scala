@@ -1,11 +1,11 @@
 package weekTest20
 
 import org.scalatest.FunSuite
-import category.time.week20.KnightDialer
-import category.time.week22.{Add2Num, ListNode}
-import category.time.week24._
-import category.time.week26._
-import category.time.week27.{HappyNumSolution, InsertionSortWithLinkedSolution, Int2RomanSolution, LongestCommonPrefixSolution, Merge2SortedIntArrSolution, MergeSortedListSolution, SortColorSolution, StockSellSolution, UglyNumSolution}
+import category.timeline.week20.KnightDialer
+import category.timeline.week22.{Add2Num, ListNode}
+import category.timeline.week24._
+import category.timeline.week26._
+import category.timeline.week27.{HappyNumSolution, InsertionSortWithLinkedSolution, Int2RomanSolution, LongestCommonPrefixSolution, Merge2SortedIntArrSolution, MergeSortedListSolution, SortColorSolution, StockSellSolution, UglyNumSolution}
 
 import scala.io.Source
 
@@ -211,18 +211,18 @@ class LeetcodeExamTestWeek20 extends FunSuite {
   }
 
   test("Merge k Sorted Lists") {
-    val l0 = new category.time.week27.ListNode(1)
-    val l1 = new category.time.week27.ListNode(4)
-    val l2 = new category.time.week27.ListNode(5)
+    val l0 = new category.timeline.week27.ListNode(1)
+    val l1 = new category.timeline.week27.ListNode(4)
+    val l2 = new category.timeline.week27.ListNode(5)
     l0.next = l1
     l1.next = l2
-    val m0 = new category.time.week27.ListNode(1)
-    val m1 = new category.time.week27.ListNode(3)
-    val m2 = new category.time.week27.ListNode(4)
+    val m0 = new category.timeline.week27.ListNode(1)
+    val m1 = new category.timeline.week27.ListNode(3)
+    val m2 = new category.timeline.week27.ListNode(4)
     m0.next = m1
     m1.next = m2
-    val r0 = new category.time.week27.ListNode(2)
-    val r1 = new category.time.week27.ListNode(6)
+    val r0 = new category.timeline.week27.ListNode(2)
+    val r1 = new category.timeline.week27.ListNode(6)
     r0.next = r1
     //MergeSortedListSolution.mergeKLists(Array(l0,m0,r0))
     MergeSortedListSolution.mergeKLists(Array.empty)
@@ -243,10 +243,10 @@ class LeetcodeExamTestWeek20 extends FunSuite {
   }
 
   test("Sort List") {
-    val l0 = new category.time.week27.ListNode(4)
-    val l1 = new category.time.week27.ListNode(2)
-    val l2 = new category.time.week27.ListNode(1)
-    val l3 = new category.time.week27.ListNode(3)
+    val l0 = new category.timeline.week27.ListNode(4)
+    val l1 = new category.timeline.week27.ListNode(2)
+    val l2 = new category.timeline.week27.ListNode(1)
+    val l3 = new category.timeline.week27.ListNode(3)
     l0.next = l1
     l1.next = l2
     l2.next = l3

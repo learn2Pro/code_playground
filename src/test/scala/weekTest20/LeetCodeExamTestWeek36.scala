@@ -1,9 +1,9 @@
 package weekTest20
 
 import org.scalatest.FunSuite
-import category.time.week27.ListNode
-import category.time.week29.TreeNode
-import category.time.week37._
+import category.timeline.week27.ListNode
+import category.timeline.week29.TreeNode
+import category.timeline.week37._
 
 /**
   * @author tang

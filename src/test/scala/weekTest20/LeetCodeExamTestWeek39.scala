@@ -2,9 +2,9 @@ package weekTest20
 
 import com.google.common.collect.Lists
 import org.scalatest.FunSuite
-import category.time.week27.ListNode
-import category.time.week39.{CloneGraph, GasStation, Node, SingleNumberII}
-import category.time.week40._
+import category.timeline.week27.ListNode
+import category.timeline.week39.{CloneGraph, GasStation, Node, SingleNumberII}
+import category.timeline.week40._
 
 /**
   * @author tang

@@ -1,8 +1,8 @@
 package weekTest20
 
 import org.scalatest.FunSuite
-import category.time.week41.{IntersectionOfTwoList, ListNode, MaximumGap, VersionComparison}
-import category.time.week42.{NumberOfOneBit, _}
+import category.timeline.week41.{IntersectionOfTwoList, ListNode, MaximumGap, VersionComparison}
+import category.timeline.week42.{NumberOfOneBit, _}
 
 /**
   * @author tang
