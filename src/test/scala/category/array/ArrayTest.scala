@@ -58,5 +58,27 @@ class ArrayTest extends FunSuite {
     assert(DuplicateNumberFinderII.findDuplicates(Array(2, 1)) == Nil)
   }
   
+  test("457. Circular Array Loop") {
+    assert(ArrayCircular.circularArrayLoop(Array(3, 1, 2)) == true)
+    assert(ArrayCircular.circularArrayLoop(Array(2, -1, 1, 2, 2)) == true)
+    assert(ArrayCircular.circularArrayLoop(Array(-1, 2)) == false)
+    assert(ArrayCircular.circularArrayLoop(Array(-2, 1, -1, -2, -2)) == false)
+  }
+  
+  test("1004. Max Consecutive Ones III") {
+    assert(MaxConsecOnesIII.longestOnes(Array(1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0), 2) == 6)
+    assert(MaxConsecOnesIII.longestOnes(Array(0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1), 3) == 10)
+  }
+  
+  test("532. K-diff Pairs in an Array") {
+    assert(KDiffPairInArray.findPairs(Array(3, 1, 4, 1, 5), 2) == 2)
+    assert(KDiffPairInArray.findPairs(Array(1, 3, 1, 5, 4), 0) == 1)
+    assert(KDiffPairInArray.findPairs(Array(1, 1, 1, 2, 2), 0) == 2)
+  }
+  
+  test("560. Subarray Sum Equals K") {
+    assert(SubArrSumEqK.subarraySum(Array(-1, -1, 1), 0) == 1)
+  }
+  
   
 }
