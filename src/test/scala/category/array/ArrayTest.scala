@@ -80,5 +80,47 @@ class ArrayTest extends FunSuite {
     assert(SubArrSumEqK.subarraySum(Array(-1, -1, 1), 0) == 1)
   }
   
+  test("581. Shortest Unsorted Continuous Subarray") {
+    assert(ShortestUnsortedSubArray.findUnsortedSubarray(Array(1)) == 0)
+    assert(ShortestUnsortedSubArray.findUnsortedSubarray(Array(1, 2, 3, 4)) == 0)
+    assert(ShortestUnsortedSubArray.findUnsortedSubarray(Array(2, 6, 4, 8, 10, 9, 15)) == 5)
+  }
+  
+  test("605. Can Place Flowers") {
+    //    assert(PlaceFlowers.canPlaceFlowers(Array(1), 0) == true)
+    //    assert(PlaceFlowers.canPlaceFlowers(Array(1, 0, 0, 0, 1), 1) == true)
+    //    assert(PlaceFlowers.canPlaceFlowers(Array(1, 0, 0, 0, 1), 2) == false)
+    assert(PlaceFlowers.canPlaceFlowers(Array(0, 0, 1, 0, 0), 1) == true)
+  }
+  
+  test("621. Task Scheduler") {
+    assert(TaskScheduler.leastInterval(Array('A', 'A', 'A', 'B', 'B', 'B'), 2) == 8)
+    assert(TaskScheduler.leastInterval(Array('A', 'A', 'A', 'B', 'B', 'B', 'C', 'C'), 1) == 8)
+    assert(TaskScheduler.leastInterval(Array('A', 'A', 'A', 'B', 'B', 'B', 'C', 'C'), 3) == 10)
+    assert(TaskScheduler.leastInterval(Array('A', 'A', 'A', 'A', 'A', 'A', 'B', 'C', 'D', 'E', 'F', 'G'), 2) == 16)
+  }
+  
+  test("643. Maximum Average Subarray I") {
+    //    assert(MaximumAverage.findMaxAverage(Array(1, 12, -5, -6, 50, 3), 4) == 12.75)
+    assert(MaximumAverage.findMaxAverage(Array(4, 2, 1, 3, 3), 2) == 3.0)
+  }
+  
+  test("665. Non-decreasing Array") {
+    assert(NonDscArray.checkPossibility(Array(4, 2, 3)) == true)
+    assert(NonDscArray.checkPossibility(Array(3, 4, 2, 3)) == false)
+    assert(NonDscArray.checkPossibility(Array(2, 3, 3, 2, 4)) == true)
+  }
+  
+  test("667. Beautiful Arrangement II") {
+    assert(BeautifulArrange.constructArray(3, 2) sameElements Array(1, 3, 2))
+    assert(BeautifulArrange.constructArray(6, 3) sameElements Array(1, 2, 3, 6, 4, 5))
+  }
+  
+  test("670. Maximum Swap") {
+    assert(MaximumSwap.maximumSwap(9973) == 9973)
+    assert(MaximumSwap.maximumSwap(9793) == 9973)
+    assert(MaximumSwap.maximumSwap(2736) == 7236)
+  }
+  
   
 }
