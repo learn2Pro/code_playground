@@ -9,7 +9,7 @@ package category.dp._200_300
   * 279. Perfect Squares
   *
   * @author derong.tdr
-  * @version Solution.scala, v 0.1 2019年11月10日 20:49 tang Exp $
+  * @version _374_GuessNumber.scala, v 0.1 2019年11月10日 20:49 tang Exp $
   */
 object _279_PerfectSquares {
   
