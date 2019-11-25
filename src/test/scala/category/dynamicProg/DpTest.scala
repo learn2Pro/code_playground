@@ -8,6 +8,7 @@ import category.dp._100_200._188_BestTimeBuyAndSellStockIV
 import category.dp._200_300.{_279_PerfectSquares, _300_LongestIncreasingSubSeq}
 import category.dp._300_400._
 import category.dp._400_500._
+import category.dp._600_700._688_KnightProbInChessBoard
 import org.scalatest.FunSuite
 
 /**
@@ -103,5 +104,5 @@ class DpTest extends FunSuite {
     assert(_474_OnesAndZeros.findMaxForm(Array("10", "0", "1"), 1, 1) == 2)
   }
   
-  
+
 }
