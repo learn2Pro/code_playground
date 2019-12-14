@@ -5,28 +5,36 @@ package category.dp._600_700
   */
 object _698_PartitionToKEqSumSubsets {
   
-  import scala.collection.JavaConversions._
+  def canPartitionKSubsets(nums: Array[Int], k: Int): Boolean = {
+    val sum = nums.sum
+    if (sum % k != 0) return false
+    val target = sum / k
+    val sorted = nums.sorted
+    var location = sorted.length - 1
+    var remain = k
+    while (sorted(location) == target) {
+      location -= 1
+      remain -= 1
+    }
+    
+    def search(arr: Array[Int]): Boolean = {
+      if (location < 0) return true
+      var earlyStop = false
+      for (i <- arr.indices if !earlyStop) {
+        if (arr(i) + sorted(location) <= target) {
+          arr(i) += sorted(location)
+          location -= 1
+          if (search(arr)) return true
+          location += 1
+          arr(i) -= sorted(location)
+        }
+        if (arr(i) == 0) earlyStop = true
+      }
+      false
+    }
+    
+    search(new Array[Int](remain))
+  }
   
-//  def canPartitionKSubsets(nums: Array[Int], k: Int): Boolean = {
-//    val holder = new java.util.HashMap[Int, Int]()
-//    var sum = 0
-//    nums.foreach { num =>
-//      sum += num
-//      if (holder.containsKey(num)) holder.put(num, holder.get(num) + 1)
-//      else holder.put(num, 1)
-//    }
-//    val avg = sum / k
-//
-//    def findTarget(target: Int): Boolean = {
-//      if (target == 0) return true
-//      if (target < 0) return false
-//      if (holder.isEmpty) return true
-//      if (holder.containsKey(target)) return true
-//      holder.keySet().foreach { k =>
-//        if (k < target && findTarget(target - k)) {
-//
-//        }
-//      }
-//    }
-//  }
+  
 }
