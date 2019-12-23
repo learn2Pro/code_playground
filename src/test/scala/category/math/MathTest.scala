@@ -6,7 +6,10 @@ package category.math
 
 import category.math._200_300.{_204_CountPrimes, _223_RectangleArea, _224_BasicCalculator, _273_IntegerToEnglishWords}
 import category.math._300_400._
-import category.math._400_500.{_423_ReconstructOriginDigitFromEng, _441_ArrangingCoins}
+import category.math._400_500.{_423_ReconstructOriginDigitFromEng, _441_ArrangingCoins, _478_GenRanPointInCircle, _483_SmallestGoodBase}
+import category.math._500_600._
+import category.math._600_700._672_BulbSwitcherII
+import category.math._700_800._753_CrackingTheSafe
 import org.scalatest.FunSuite
 
 /**
@@ -124,4 +127,67 @@ class MathTest extends FunSuite {
     assert(_441_ArrangingCoins.arrangeCoins(1804289383) == 60070)
   }
   
+  test(" 478. Generate Random Point in a Circle") {
+    println(new _478_GenRanPointInCircle(0.01, -73839.1, -3289891.3).randPoint().toList)
+    println(new _478_GenRanPointInCircle(1.0, 0.0, 0.0).randPoint().toList)
+    println(new _478_GenRanPointInCircle(1.0, 0.0, 0.0).randPoint().toList)
+  }
+  
+  test("_483_SmallestGoodBase") {
+    assert(_483_SmallestGoodBase.smallestGoodBase("16035713712910627") == "502")
+    assert(_483_SmallestGoodBase.smallestGoodBase("14919921443713777") == "496")
+    assert(_483_SmallestGoodBase.smallestGoodBase("13") == "3")
+    assert(_483_SmallestGoodBase.smallestGoodBase("4681") == "8")
+    assert(_483_SmallestGoodBase.smallestGoodBase("1000000000000000000") == "999999999999999999")
+  }
+  
+  test("_507_PerfectNumber") {
+    assert(_507_PerfectNumber.checkPerfectNumber(28))
+    assert(_507_PerfectNumber.checkPerfectNumber(1))
+  }
+  
+  test("535. Encode and Decode TinyURL") {
+    val codec = new Codec()
+    assert(codec.decode(codec.encode("1")) == "1")
+    assert(codec.decode(codec.encode("2")) == "2")
+    assert(codec.decode(codec.encode("3")) == "3")
+  }
+  
+  test("553. Optimal Division") {
+    assert(_553_OptimalDivision.optimalDivision(Array(1000, 100, 10, 2)) == "1000/(100/10/2)")
+  }
+  
+  test("_592_FractionAdditionAndSubtraction") {
+    assert(_592_FractionAdditionAndSubtraction.fractionAddition("1/3-1/2") == "-1/6")
+    assert(_592_FractionAdditionAndSubtraction.fractionAddition("-1/2+1/2") == "0/1")
+    assert(_592_FractionAdditionAndSubtraction.fractionAddition("-1/2+1/2+1/3") == "1/3")
+    assert(_592_FractionAdditionAndSubtraction.fractionAddition("5/3+1/3") == "2/1")
+  }
+  
+  test("593. Valid Square") {
+    assert(_593_ValidaSquare.validSquare(Array(0, 0), Array(1, 1), Array(0, 1), Array(1, 0)))
+  }
+  
+  test("_633_SumOfSquareNumbers") {
+    assert(_633_SumOfSquareNumbers.judgeSquareSum(2147483646) == true)
+  }
+  
+  test("_640_SolveTheEquation") {
+    assert(_640_SolveTheEquation.solveEquation("-x=-1") == "x=1")
+    assert(_640_SolveTheEquation.solveEquation("x+5-3+x=6+x-2") == "x=2")
+    assert(_640_SolveTheEquation.solveEquation("x=x") == "Infinite solutions")
+    assert(_640_SolveTheEquation.solveEquation("2x=x") == "x=0")
+    assert(_640_SolveTheEquation.solveEquation("x=x+2") == "No solution")
+  }
+  
+  test("_672_BulbSwitcherII") {
+    assert(_672_BulbSwitcherII.flipLights(1, 1) == 2)
+    assert(_672_BulbSwitcherII.flipLights(2, 1) == 3)
+    assert(_672_BulbSwitcherII.flipLights(3, 1) == 4)
+  }
+  
+  test("_753_CrackingTheSafe") {
+    assert(_753_CrackingTheSafe.crackSafe(2, 1) == "00")
+    assert(_753_CrackingTheSafe.crackSafe(3, 2) == "000011101000")
+  }
 }
