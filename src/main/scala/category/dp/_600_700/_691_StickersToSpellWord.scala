@@ -10,7 +10,7 @@ package category.dp._600_700
   * 691. Stickers to Spell Word
   *
   * @author derong.tdr
-  * @version Solution.scala, v 0.1 2019年12月14日 14:07 tang Exp $
+  * @version _235_LcaOfBst.scala, v 0.1 2019年12月14日 14:07 tang Exp $
   */
 object _691_StickersToSpellWord {
   def minStickers(stickers: Array[String], target: String): Int = {

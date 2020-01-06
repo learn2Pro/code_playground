@@ -11,7 +11,7 @@ package category.math._600_700
   * 672. Bulb Switcher II
   *
   * @author derong.tdr
-  * @version Solution.scala, v 0.1 2019年12月22日 17:40 tang Exp $
+  * @version _235_LcaOfBst.scala, v 0.1 2019年12月22日 17:40 tang Exp $
   */
 object _672_BulbSwitcherII {
   
