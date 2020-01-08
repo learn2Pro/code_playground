@@ -8,6 +8,7 @@ import category.timeline.week29.{TreeNode => STNode}
 import category.tree._300_400._337_HouseRobberIII
 import category.tree._400_500.{_437_PathSumIII, _450_DeleteNodeInABST}
 import category.tree._500_600.{_508_MostFreqSubTreeSum, _538_ConvertBST2GreaterTree}
+import category.tree._600_700._652_FindDupSubtrees
 import org.scalatest.FunSuite
 
 /**
@@ -81,5 +82,20 @@ class TreeTestV2 extends FunSuite {
     n2.right = n4
     n2.right = n5
     assert(_538_ConvertBST2GreaterTree.convertBST(n1) == n1)
+  }
+  
+  test("_652_FindDupSubtrees"){
+    val n1 = new STNode(0)
+    val n2 = new STNode(0)
+    val n3 = new STNode(0)
+    val n4 = new STNode(0)
+    val n5 = new STNode(0)
+    val n6 = new STNode(0)
+    n1.left = n2
+    n1.right = n3
+    n2.left = n4
+    n3.right = n5
+    n5.right = n6
+    assert(_652_FindDupSubtrees.findDuplicateSubtrees(n1)==List(n6))
   }
 }
