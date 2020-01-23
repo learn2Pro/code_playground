@@ -9,6 +9,7 @@ import category.hashtable._300_400._355_DesignTwitter
 import category.hashtable._400_500._447_NumberOfBoomerangs
 import category.hashtable._500_600._554_BrickWall
 import category.hashtable._600_700.{_632_SmallestRangeCoveringElementsFromKLists, _648_ReplaceWords}
+import category.hashtable._700_800.{_720_LongestWordInDictionary, _739_DailyTemperatures, _748_ShortestCompletingWord}
 import org.scalatest.FunSuite
 
 /**
@@ -64,5 +65,23 @@ class HashTableTest extends FunSuite {
     assert(_648_ReplaceWords.replaceWords(
       List("a", "aa", "aaa", "aaaa"), "a aa a aaaa aaa aaa aaa aaaaaa bbb baba ababa") == "a a a a a a a a bbb baba a"
     )
+  }
+  
+  test("_720_LongestWordInDictionary") {
+    assert(_720_LongestWordInDictionary.longestWord(Array("w", "wo", "wor", "worl", "world")) == "world")
+    assert(_720_LongestWordInDictionary.longestWord(Array("a", "banana", "app", "appl", "ap", "apply", "apple")) == "apple")
+  }
+  
+  test("_739_DailyTemperatures") {
+    assert(_739_DailyTemperatures.dailyTemperatures(Array(89, 62, 70, 58, 47, 47, 46, 76, 100, 70)).toList
+            == List(8, 1, 5, 4, 3, 2, 1, 1, 0, 0))
+    assert(_739_DailyTemperatures.dailyTemperatures(Array(73, 74, 75, 71, 69, 72, 76, 73)).toList
+            == List(1, 1, 4, 2, 1, 1, 0, 0))
+  }
+  
+  test("_748_ShortestCompletingWord") {
+    assert(_748_ShortestCompletingWord.shortestCompletingWord("tR28607",
+      Array("present", "fall", "make", "change", "everything", "performance", "owner", "beat", "name", "serve")) == "present")
+    assert(_748_ShortestCompletingWord.shortestCompletingWord("1s3 PSt", Array("step", "steps", "stripe", "stepple")) == "steps")
   }
 }
