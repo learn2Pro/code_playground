@@ -4,7 +4,7 @@
   */
 package category.dynamicProg
 
-import category.bfs._900_1000._909_SnakesAndLadders
+import category.bfs._909_Solution
 import category.dp._300_400.{_321_CreateMaximumNumber, _354_RussianDollEnvelopes, _363_MaxSumOfRectangleNoLargerThanK}
 import category.dp._400_500._472_ConcatenatedWords
 import category.dp._500_600.{_514_FreedomTrail, _546_RemoveBoxes, _552_StudentAttendanceRecordII}
@@ -69,7 +69,7 @@ class DpTest_20191127 extends FunSuite {
   }
   
   test("MockExam_20191130_3") {
-    assert(_909_SnakesAndLadders.snakesAndLadders(Array(
+    assert(_909_Solution.snakesAndLadders(Array(
       Array(-1, -1, -1, -1, -1, -1),
       Array(-1, -1, -1, -1, -1, -1),
       Array(-1, -1, -1, -1, -1, -1),
@@ -78,7 +78,7 @@ class DpTest_20191127 extends FunSuite {
       Array(-1, 15, -1, -1, -1, -1)
     )) == 4)
     /*[[-1,-1,2,-1],[14,2,12,3],[4,9,1,11],[-1,2,1,16]]*/
-    assert(_909_SnakesAndLadders.snakesAndLadders(Array(
+    assert(_909_Solution.snakesAndLadders(Array(
       Array(-1, -1, 2, -1),
       Array(14, 2, 12, 3),
       Array(4, 9, 1, 11),
@@ -88,7 +88,7 @@ class DpTest_20191127 extends FunSuite {
     [12,5,7,24,-1,30],[10,-1,-1,-1,25,17],
     [32,-1,28,-1,-1,32],
     [-1,-1,23,-1,13,19]]*/
-    assert(_909_SnakesAndLadders.snakesAndLadders(Array(
+    assert(_909_Solution.snakesAndLadders(Array(
       Array(-1, -1, 30, 14, 15, -1),
       Array(23, 9, -1, -1, -1, 9),
       Array(12, 5, 7, 24, -1, 30),

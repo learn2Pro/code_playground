@@ -1,10 +1,13 @@
-package category.bfs._900_1000
-
+/**
+  * Alipay.com Inc.
+  * Copyright (c) 2004-2020 All Rights Reserved.
+  */
+package category.bfs
 
 /**
   * 909. Snakes and Ladders
   */
-object _909_SnakesAndLadders {
+object _909_Solution {
   
   import java.util
   
