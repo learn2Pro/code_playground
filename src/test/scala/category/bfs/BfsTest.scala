@@ -4,6 +4,7 @@
   */
 package category.bfs
 
+import category.twopointer.{_424_Solution, _524_Solution, _567_Solution}
 import org.scalatest.FunSuite
 
 /**
@@ -36,6 +37,19 @@ class BfsTest extends FunSuite {
     assert(_773_Solution.slidingPuzzle(
       Array(Array(1, 2, 3), Array(4, 0, 5))
     ) == 1)
+  }
+  
+  test("_424_Solution"){
+    assert(_424_Solution.characterReplacement("ABAB",2)==4)
+  }
+  
+  test("_524_Solution"){
+    assert(_524_Solution.findLongestWord("wsmzffsupzgauxwokahurhhikapmqitytvcgrfpavbxbmmzdhnrazartkzrnsmoovmiofmilihynvqlmwcihkfskwozyjlnpkgdkayioieztjswgwckmuqnhbvsfoevdynyejihombjppgdgjbqtlauoapqldkuhfbynopisrjsdelsfspzcknfwuwdcgnaxpevwodoegzeisyrlrfqqavfziermslnlclbaejzqglzjzmuprpksjpqgnohjjrpdlofruutojzfmianxsbzfeuabhgeflyhjnyugcnhteicsvjajludwizklkkosrpvhhrgkzctzwcghpxnbsmkxfydkvfevyewqnzniofhsriadsoxjmsswgpiabcbpdjjuffnbvoiwotrbvylmnryckpnyemzkiofwdnpnbhkapsktrkkkakxetvdpfkdlwqhfjyhvlxgywavtmezbgpobhikrnebmevthlzgajyrmnbougmrirsxi",List("jpthiudqzzeugzwwsngebdeai","nbmxgkduynigvzuyblwjepn"))=="nbmxgkduynigvzuyblwjepn")
+    assert(_524_Solution.findLongestWord("abpcplea",List("ale","apple","monkey","plea"))=="apple")
+  }
+  
+  test("_567_Solution"){
+    assert(_567_Solution.checkInclusion("adc","dcda"))
   }
   
 }

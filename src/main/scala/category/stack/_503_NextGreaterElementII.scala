@@ -1,4 +1,8 @@
-package category.stack._500_600
+/**
+  * Alipay.com Inc.
+  * Copyright (c) 2004-2020 All Rights Reserved.
+  */
+package category.stack
 
 /**
   * 503. Next Greater Element II
