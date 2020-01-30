@@ -21,7 +21,7 @@ object _406_Solution {
   }
   
   /**
-    * class Solution {
+    * class _237_Solution {
     * public int[][] reconstructQueue(int[][] people) {
     * LinkedList<int[]> list = new LinkedList<>();
     *         Arrays.sort(people,(a,b)->{

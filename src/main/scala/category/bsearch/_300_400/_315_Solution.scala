@@ -56,7 +56,7 @@ object _315_Solution {
   
   //  import scala.collection.mutable
   //  import scala.collection.mutable.ArrayBuffer
-  //  object Solution {
+  //  object _237_Solution {
   //    def countSmaller(nums: Array[Int]): List[Int] = {
   //      val queue = new mutable.PriorityQueue[Int]()(new Ordering[Int] {
   //        override def compare(x: Int, y: Int): Int = y - x
