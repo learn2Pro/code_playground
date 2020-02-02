@@ -8,7 +8,7 @@ import category.dp._100_200._188_BestTimeBuyAndSellStockIV
 import category.dp._200_300.{_279_PerfectSquares, _300_LongestIncreasingSubSeq}
 import category.dp._300_400._
 import category.dp._400_500._
-import category.dp._600_700._688_KnightProbInChessBoard
+import category.dp._871_Solution
 import org.scalatest.FunSuite
 
 /**
@@ -104,5 +104,26 @@ class DpTest extends FunSuite {
     assert(_474_OnesAndZeros.findMaxForm(Array("10", "0", "1"), 1, 1) == 2)
   }
   
-
+  
+  test("_871_Solution") {
+    /**
+      * 1000
+      * 83
+      * [[25,27],[36,187],[140,186],[378,6],[492,202],[517,89],[579,234],[673,86],[808,53],[954,49]]
+      */
+    assert(_871_Solution.minRefuelStops(1000, 83, Array(
+      Array(25,27), Array(36,187), Array(140,186), Array(378,6),
+      Array(492,202), Array(517,89), Array(579,234), Array(673,86),
+      Array(808,53), Array(954,49)
+    )) == -1)
+    assert(_871_Solution.minRefuelStops(100, 10, Array(Array(10, 60), Array(20, 30), Array(30, 30), Array(60, 40))) == 2)
+    assert(_871_Solution.minRefuelStops(100, 1, Array(Array(10, 100))) == -1)
+    assert(_871_Solution.minRefuelStops(1000, 299,
+      Array(
+        Array(13, 21), Array(26, 115), Array(100, 47), Array(225, 99),
+        Array(299, 141), Array(444, 198), Array(608, 190), Array(636, 157),
+        Array(647, 255), Array(841, 123)
+      )) == 4)
+  }
+  
 }

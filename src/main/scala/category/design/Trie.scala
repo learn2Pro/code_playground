@@ -6,7 +6,7 @@ package category.design
 class Trie() {
   
   /** Initialize your data structure here. */
-  var word    : String      = _
+  var word    : String            = _
   var children: Array[Trie] = new Array[Trie](26)
   
   /** Inserts a word into the trie. */
