@@ -7,7 +7,7 @@ class _22_Solution:
         ans = []
 
         def backtrack(previous: str, left: int, right: int) -> None:
-            if left == 0 and right == 0: ans.append(previous);return;
+            if left == right == 0: ans.append(previous);return;
             if left > 0: backtrack(previous + '(', left - 1, right)
             if left < right: backtrack(previous + ')', left, right - 1)
 
