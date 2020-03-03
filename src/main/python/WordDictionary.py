@@ -36,7 +36,7 @@ class WordDictionary:
         n = len(word)
         while queue:
             size = len(queue)
-            for j in range(size):
+            for _ in range(size):
                 node = queue.pop(0)
                 if i == n:
                     if node.get("_", False): return True

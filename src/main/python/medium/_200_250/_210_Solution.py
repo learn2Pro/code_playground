@@ -38,25 +38,45 @@ class _210_Solution:
     #     return ans[::-1]
 
     # bfs [topological sort]
+    # def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+    #     grid = [[] for _ in range(numCourses)]
+    #     inDegree = [0] * numCourses
+    #     for lst in prerequisites:
+    #         grid[lst[1]].append(lst[0])
+    #         inDegree[lst[0]] += 1
+    #     queue = []
+    #     ans = []
+    #     for i in range(numCourses):
+    #         if inDegree[i] > 0: continue
+    #         queue.append(i)
+    #     while queue:
+    #         src = queue.pop(0)
+    #         ans.append(src)
+    #         for dst in grid[src]:
+    #             inDegree[dst] -= 1
+    #             if inDegree[dst] == 0:
+    #                 queue.append(dst)
+    #     return [] if len(ans) != numCourses else ans
+
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
-        grid = [[] for _ in range(numCourses)]
-        inDegree = [0] * numCourses
-        for lst in prerequisites:
-            grid[lst[1]].append(lst[0])
-            inDegree[lst[0]] += 1
-        queue = []
+        visited = [0] * numCourses
+        edges = [[] for _ in range(numCourses)]
         ans = []
+        for lst in prerequisites:
+            edges[lst[0]].append(lst[1])
+
+        def dfs(index: int) -> bool:
+            if visited[index] == -1: return False
+            if visited[index] == 1: return True
+            visited[index] = -1
+            for dst in edges[index]:
+                if not dfs(dst): return False
+            ans.append(index)
+            visited[index] = 1
+
         for i in range(numCourses):
-            if inDegree[i] > 0: continue
-            queue.append(i)
-        while queue:
-            src = queue.pop(0)
-            ans.append(src)
-            for dst in grid[src]:
-                inDegree[dst] -= 1
-                if inDegree[dst] == 0:
-                    queue.append(dst)
-        return [] if len(ans) != numCourses else ans
+            if not dfs(i): return []
+        return ans[::-1]
 
 
 if __name__ == '__main__':
