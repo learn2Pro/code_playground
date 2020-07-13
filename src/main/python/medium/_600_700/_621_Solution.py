@@ -1,7 +1,5 @@
 # 621. Task Scheduler
-import heapq
 from typing import List
-
 
 class _621_Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
