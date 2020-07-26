@@ -22,7 +22,7 @@ class TreeTestify:
         #         current = current.left
         # return ans
         ans, stack = [], []
-        while not node or stack:
+        while node or stack:
             while node:
                 stack.append(node)
                 node = node.left
@@ -33,7 +33,7 @@ class TreeTestify:
 
     def preorder(self, node: TreeNode):
         ans, stack = [], []
-        while not node or stack:
+        while node or stack:
             while node:
                 stack.append(node)
                 ans.append(node.val)
@@ -43,7 +43,7 @@ class TreeTestify:
 
     def postorder(self, node: TreeNode):
         ans, stack = [], []
-        while not node or stack:
+        while node or stack:
             while node:
                 stack.append(node)
                 ans.append(node.val)
