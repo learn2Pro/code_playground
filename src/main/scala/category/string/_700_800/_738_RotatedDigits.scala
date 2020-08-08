@@ -3,7 +3,7 @@ package category.string._700_800
 /**
   * 788. Rotated Digits
   */
-object _738_RotatedDigits {
+object _788_RotatedDigits {
   def rotatedDigits(N: Int): Int = {
     var ans = 0
     for (i <- 1 until N) {
