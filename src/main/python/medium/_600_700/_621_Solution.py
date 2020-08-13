@@ -1,6 +1,7 @@
 # 621. Task Scheduler
 from typing import List
 
+
 class _621_Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
         container = [0] * 26
@@ -11,7 +12,7 @@ class _621_Solution:
         for i in range(25):
             if container[i] == 0: continue
             idle -= min(container[i], container[-1] - 1)
-        return len(tasks) if idle < 0 else idle + len(tasks)
+        return len(tasks) + max(0, idle)
 
 
 if __name__ == '__main__':
