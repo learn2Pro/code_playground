@@ -62,3 +62,9 @@ func TestMergeTwoLists(t *testing.T) {
 	assert.Equal(t, mergeTwoLists(&ListNode{Val: 5}, nil).Val, 5)
 	assert.Equal(t, mergeTwoLists(nil, &ListNode{Val: 5}).Val, 5)
 }
+func TestRemoveDuplicates(t *testing.T) {
+	//assert.Equal(t, removeDuplicates([]int{1, 1, 2}), 2)
+	assert.Equal(t, removeDuplicates([]int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}), 5)
+	//assert.Equal(t, removeDuplicates([]int{0, 1, 2, 3, 4, 5, 6}), 7)
+	//assert.Equal(t, removeDuplicates([]int{0, 0, 0, 0}), 1)
+}
