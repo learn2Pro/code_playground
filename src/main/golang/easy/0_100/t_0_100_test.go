@@ -1,6 +1,7 @@
 package easy
 
 import (
+	"fmt"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -67,4 +68,29 @@ func TestRemoveDuplicates(t *testing.T) {
 	assert.Equal(t, removeDuplicates([]int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}), 5)
 	//assert.Equal(t, removeDuplicates([]int{0, 1, 2, 3, 4, 5, 6}), 7)
 	//assert.Equal(t, removeDuplicates([]int{0, 0, 0, 0}), 1)
+}
+func TestRemoveElement(t *testing.T) {
+	assert.Equal(t, removeElement([]int{3, 2, 2, 3}, 3), 2)
+	assert.Equal(t, removeElement([]int{1}, 1), 0)
+	assert.Equal(t, removeElement([]int{1, 1, 1, 1}, 1), 0)
+	assert.Equal(t, removeElement([]int{}, 1), 0)
+}
+func Test67(t *testing.T) {
+	//assert.Equal(t, addBinary("1010", "1011"), "10101")
+	assert.Equal(t, addBinary("1", "0"), "1")
+}
+func Test69(t *testing.T) {
+	assert.Equal(t, mySqrt(0), 0)
+	assert.Equal(t, mySqrt(1), 1)
+	assert.Equal(t, mySqrt(2), 1)
+	assert.Equal(t, mySqrt(3), 1)
+	assert.Equal(t, mySqrt(4), 2)
+	assert.Equal(t, mySqrt(5), 2)
+	assert.Equal(t, mySqrt(8), 2)
+	assert.Equal(t, mySqrt(9), 3)
+	assert.Equal(t, mySqrt(10), 3)
+}
+func TestSlices(t *testing.T) {
+	a := []int{1, 2, 3}
+	fmt.Println(a[3:])
 }
