@@ -5,6 +5,18 @@ import (
 	"testing"
 )
 
+func TestRemoveNthFromEnd(t *testing.T) {
+	l0 := &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: &ListNode{Val: 5, Next: &ListNode{Val: 2}}}}}}
+	l1 := &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 5}}}}
+	assert.Equal(t, removeNthFromEnd(l0, 2), l1)
+}
+
+func TestPartitionList(t *testing.T) {
+	l0 := &ListNode{Val: 1, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: &ListNode{Val: 2, Next: &ListNode{Val: 5, Next: &ListNode{Val: 2}}}}}}
+	l1 := &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 2, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3, Next: &ListNode{Val: 5}}}}}}
+	assert.Equal(t, partition(l0, 3), l1)
+}
+
 func TestAddTwoNumber(t *testing.T) {
 	var l0 = ListNode{Val: 2, Next: &ListNode{Val: 4, Next: &ListNode{Val: 3}}}
 	var l1 = ListNode{Val: 5, Next: &ListNode{Val: 6, Next: &ListNode{Val: 4}}}

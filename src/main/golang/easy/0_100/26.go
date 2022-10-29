@@ -4,19 +4,35 @@ package easy
  * 26. Remove Duplicates from Sorted Array
  */
 // 0, 0, 1, 1, 1, 2, 2, 3, 3, 4
+
 func removeDuplicates(nums []int) int {
-	if len(nums) < 2 {
-		return len(nums)
+	if len(nums) <= 0 {
+		return 0
 	}
-	k := 0
-	for i := 1; i < len(nums); i++ {
-		if nums[k] != nums[i] {
-			k++
-			nums[k] = nums[i]
+	slow, fast := 0, 0
+	for fast < len(nums) {
+		if nums[slow] != nums[fast] {
+			slow++
+			nums[slow] = nums[fast]
 		}
+		fast++
 	}
-	return k + 1
+	return slow + 1
 }
+
+//func removeDuplicates(nums []int) int {
+//	if len(nums) < 2 {
+//		return len(nums)
+//	}
+//	k := 0
+//	for i := 1; i < len(nums); i++ {
+//		if nums[k] != nums[i] {
+//			k++
+//			nums[k] = nums[i]
+//		}
+//	}
+//	return k + 1
+//}
 
 var dummy = -101
 
