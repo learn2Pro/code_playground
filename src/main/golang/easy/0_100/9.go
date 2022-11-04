@@ -19,11 +19,11 @@ func isPalindrome(x int) bool {
 	if x < 0 {
 		return false
 	}
-	if x<10 {
+	if x < 10 {
 		return true
 	}
-	 l := x
-	var r  = 0
+	l := x
+	var r = 0
 	for l > 0 {
 		mod := l % 10
 		r = r*10 + mod
