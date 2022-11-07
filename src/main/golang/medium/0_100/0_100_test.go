@@ -38,3 +38,7 @@ func TestAddTwoNumber(t *testing.T) {
 func TestLengthOfLongest(t *testing.T) {
 	assert.Equal(t, lengthOfLongestSubstring("abcabcbb"), 3)
 }
+
+func Test22(t *testing.T) {
+	assert.Equal(t, generateParenthesis(1), []string{"()"})
+}

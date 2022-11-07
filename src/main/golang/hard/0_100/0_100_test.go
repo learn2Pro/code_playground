@@ -12,3 +12,7 @@ func TestPartitionList(t *testing.T) {
 	ans := &ListNode{Val: 1, Next: &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: &ListNode{Val: 4, Next: &ListNode{Val: 5, Next: &ListNode{Val: 6}}}}}}}}
 	assert.Equal(t, mergeKLists([]*ListNode{l0, l1, l2}), ans)
 }
+
+func TestSolveNQueen(t *testing.T) {
+	assert.Equal(t, solveNQueens(4), [][]string{[]string{".Q..", "...Q", "Q...", "..Q."}, []string{"..Q.", "Q...", "...Q", ".Q.."}})
+}
