@@ -41,3 +41,8 @@ func TestTweets_1(t *testing.T) {
 	assert.Equal(t, []int{6}, twitter.GetNewsFeed(2))
 
 }
+
+func Test310(t *testing.T) {
+	//assert.Equal(t, []int{1}, findMinHeightTrees(4, [][]int{{1, 0}, {1, 2}, {1, 3}}))
+	assert.Equal(t, []int{4, 3}, findMinHeightTrees(6, [][]int{{3, 0}, {3, 1}, {3, 2}, {3, 4}, {5, 4}}))
+}
