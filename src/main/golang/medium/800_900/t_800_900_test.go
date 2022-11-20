@@ -13,3 +13,9 @@ func Test863(t *testing.T) {
 	root = &TreeNode{Val: 0, Right: &TreeNode{Val: 1, Left: target, Right: &TreeNode{Val: 5}}}
 	assert.Equal(t, []int{4, 0, 5}, distanceK(root, target, 2))
 }
+
+func Test852(t *testing.T) {
+	assert.Equal(t, 4, peakIndexInMountainArray([]int{40, 48, 61, 75, 100, 99, 98, 39, 30, 10}))
+	assert.Equal(t, 4, peakIndexInMountainArray([]int{40, 48, 61, 75, 100, 99, 98, 39, 30, 10}))
+	assert.Equal(t, 5, peakIndexInMountainArray([]int{18, 29, 38, 59, 98, 100, 99, 98, 90}))
+}

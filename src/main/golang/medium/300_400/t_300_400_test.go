@@ -46,3 +46,8 @@ func Test310(t *testing.T) {
 	//assert.Equal(t, []int{1}, findMinHeightTrees(4, [][]int{{1, 0}, {1, 2}, {1, 3}}))
 	assert.Equal(t, []int{4, 3}, findMinHeightTrees(6, [][]int{{3, 0}, {3, 1}, {3, 2}, {3, 4}, {5, 4}}))
 }
+
+func Test300(t *testing.T) {
+	assert.Equal(t, 6, lengthOfLIS([]int{3, 5, 6, 2, 5, 4, 19, 5, 6, 7, 12}))
+	assert.Equal(t, 4, lengthOfLIS([]int{10, 9, 2, 5, 3, 7, 101, 18}))
+}
