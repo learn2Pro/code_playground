@@ -13,3 +13,7 @@ func Test154(t *testing.T) {
 	assert.Equal(t, 2, findMin([]int{2, 2, 2}))
 	assert.Equal(t, 0, findMin([]int{2, 2, 2, 0, 1}))
 }
+
+func Test188(t *testing.T) {
+	assert.Equal(t, 2, maxProfit1(2, []int{2, 4, 1}))
+}

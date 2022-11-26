@@ -33,6 +33,12 @@ func Test76(t *testing.T) {
 	assert.Equal(t, "a", minWindow("a", "a"))
 	assert.Equal(t, "", minWindow("a", "aa"))
 }
+func Test25(t *testing.T) {
+	l0 := &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: &ListNode{Val: 5}}}}}
+	assert.Equal(t, &ListNode{Val: 3}, reverseKGroup(l0, 2))
+	//assert.Equal(t, &ListNode{Val: 3}, reverseKGroup(l0, 3))
+	//assert.Equal(t, &ListNode{Val: 3}, reverseKGroup(l0, 4))
+}
 func TestXx(t *testing.T) {
 	//nums := []int{1, 2, 3, 3, 5, 6, 7}
 	//assert.Equal(t, 2, sort.Search(6, func(i int) bool {

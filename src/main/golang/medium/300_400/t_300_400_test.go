@@ -51,3 +51,11 @@ func Test300(t *testing.T) {
 	assert.Equal(t, 6, lengthOfLIS([]int{3, 5, 6, 2, 5, 4, 19, 5, 6, 7, 12}))
 	assert.Equal(t, 4, lengthOfLIS([]int{10, 9, 2, 5, 3, 7, 101, 18}))
 }
+
+func Test395(t *testing.T) {
+	assert.Equal(t, 6, longestSubstring("aaabbb", 3))
+	assert.Equal(t, 1, longestSubstring("a", 1))
+	assert.Equal(t, 4, longestSubstring("aaaa", 1))
+	assert.Equal(t, 6, longestSubstring("ababcc", 2))
+	assert.Equal(t, 5, longestSubstring("ababbc", 2))
+}

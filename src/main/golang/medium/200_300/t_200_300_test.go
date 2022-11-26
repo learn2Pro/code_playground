@@ -20,3 +20,10 @@ func Test275(t *testing.T) {
 	assert.Equal(t, 1, hIndex([]int{1, 2}))
 	assert.Equal(t, 0, hIndex([]int{0}))
 }
+
+func Test209(t *testing.T) {
+	assert.Equal(t, 3, minSubArrayLen(11, []int{1, 2, 3, 4, 5}))
+	assert.Equal(t, 1, minSubArrayLen(4, []int{1, 4, 4}))
+	assert.Equal(t, 2, minSubArrayLen(7, []int{2, 3, 1, 2, 4, 3}))
+	assert.Equal(t, 0, minSubArrayLen(11, []int{1, 1, 1, 1, 1, 1, 1, 1}))
+}
