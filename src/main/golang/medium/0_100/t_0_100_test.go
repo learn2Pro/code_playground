@@ -42,3 +42,7 @@ func TestLengthOfLongest(t *testing.T) {
 func Test22(t *testing.T) {
 	assert.Equal(t, generateParenthesis(1), []string{"()"})
 }
+
+func Test15(t *testing.T) {
+	assert.Equal(t, [][]int{[]int{0, 0, 0}}, threeSum([]int{0, 0, 0}))
+}

@@ -13,3 +13,7 @@ func Test113(t *testing.T) {
 func Test153(t *testing.T) {
 	assert.Equal(t, 1, findMin([]int{4, 5, 1, 2, 3}))
 }
+
+func Test151(t *testing.T) {
+	assert.Equal(t, "blue is sky the", reverseWords("the sky is blue"))
+}
