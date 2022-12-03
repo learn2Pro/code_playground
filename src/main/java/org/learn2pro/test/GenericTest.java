@@ -9,7 +9,7 @@ public class GenericTest {
 
         //报错,extends为上界通配符,只能取值,不能放.
         //因为Fruit的子类不只有Apple还有Banana,这里不能确定具体的泛型到底是Apple还是Banana，所以放入任何一种类型都会报错
-        list.add(new Banana());
+//        list.add(new Banana());
 
         //可以正常获取
         Fruit fruit = list.get(1);
@@ -27,7 +27,7 @@ public class GenericTest {
     }
 
     public static void main(String[] args) {
-        var obj = new GenericTest();
+        GenericTest obj = new GenericTest();
         obj.testExtends(new ArrayList<>());
         obj.testSuper(new ArrayList<>());
     }

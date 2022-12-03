@@ -19,3 +19,7 @@ func Test852(t *testing.T) {
 	assert.Equal(t, 4, peakIndexInMountainArray([]int{40, 48, 61, 75, 100, 99, 98, 39, 30, 10}))
 	assert.Equal(t, 5, peakIndexInMountainArray([]int{18, 29, 38, 59, 98, 100, 99, 98, 90}))
 }
+
+func Test889(t *testing.T) {
+	assert.Equal(t, &TreeNode{Val: 1}, constructFromPrePost([]int{1, 2, 4, 5, 3, 6, 7}, []int{4, 5, 2, 6, 7, 3, 1}))
+}

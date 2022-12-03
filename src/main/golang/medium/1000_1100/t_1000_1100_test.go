@@ -19,3 +19,6 @@ func Test1094(t *testing.T) {
 	assert.Equal(t, true, carPooling([][]int{{2, 1, 5}, {3, 3, 7}}, 5))
 	assert.Equal(t, true, carPooling([][]int{{2, 1, 5}, {3, 5, 7}}, 3))
 }
+func Test1008(t *testing.T) {
+	assert.Equal(t, &TreeNode{}, bstFromPreorder([]int{8, 5, 1, 7, 10, 12}))
+}

@@ -7,6 +7,27 @@ type TreeNode struct {
 }
 
 func bstFromPreorder(preorder []int) *TreeNode {
+	var build func(l, r int) *TreeNode
+	build = func(l, r int) *TreeNode {
+		if l > r {
+			return nil
+		}
+		curr := preorder[l]
+		var idx = -1
+		for i := l + 1; i <= r; i++ {
+			if preorder[i] < curr {
+				idx = i
+			} else {
+				break
+			}
+		}
+		node := &TreeNode{Val: curr}
+		node.Left, node.Right = build(l+1, idx), build(idx+1, r)
+		return node
+	}
+	return build(0, len(preorder)-1)
+}
+func bstFromPreorder1(preorder []int) *TreeNode {
 	if len(preorder) <= 0 {
 		return nil
 	}
