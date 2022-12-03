@@ -1,5 +1,6 @@
-package medium
+package lc
 
+//leetcode submit region begin(Prohibit modification and deletion)
 func findKthLargest(nums []int, k int) int {
 	n := len(nums)
 	var ans int
@@ -22,10 +23,14 @@ func findKthLargest(nums []int, k int) int {
 		if n-p0 == k {
 			ans = nums[p0]
 			return
+		} else if n-p0 < k {
+			quickSort(l, p0-1)
+		} else {
+			quickSort(p0+1, r)
 		}
-		quickSort(l, p0-1)
-		quickSort(p0+1, r)
 	}
 	quickSort(0, n-1)
 	return ans
 }
+
+//leetcode submit region end(Prohibit modification and deletion)

@@ -1,4 +1,4 @@
-package medium
+package lc
 
 import (
 	"sort"
@@ -6,12 +6,15 @@ import (
 	"strings"
 )
 
-//TreeNode Definition for a binary tree node.
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+//leetcode submit region begin(Prohibit modification and deletion)
+/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
 
 type Codec struct {
 	SEP string
@@ -70,3 +73,13 @@ func (this *Codec) deserialize(data string) *TreeNode {
 	}
 	return deser(0, len(preorder)-1)
 }
+
+/**
+ * Your Codec object will be instantiated and called as such:
+ * ser := Constructor()
+ * deser := Constructor()
+ * tree := ser.serialize(root)
+ * ans := deser.deserialize(tree)
+ * return ans
+ */
+//leetcode submit region end(Prohibit modification and deletion)

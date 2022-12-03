@@ -16,3 +16,8 @@ func Test424(t *testing.T) {
 	assert.Equal(t, 4, characterReplacement("ABAB", 2))
 	assert.Equal(t, 4, characterReplacement("AABABBA", 1))
 }
+
+func Test449(t *testing.T) {
+	codec := Constructor()
+	assert.Equal(t, nil, codec.deserialize(codec.serialize(nil)))
+}

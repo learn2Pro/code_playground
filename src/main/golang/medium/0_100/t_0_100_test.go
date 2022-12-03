@@ -46,3 +46,7 @@ func Test22(t *testing.T) {
 func Test15(t *testing.T) {
 	assert.Equal(t, [][]int{[]int{0, 0, 0}}, threeSum([]int{0, 0, 0}))
 }
+
+func Test96(t *testing.T) {
+	assert.Equal(t, 5, numTrees(3))
+}
