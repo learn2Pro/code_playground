@@ -31,3 +31,17 @@ func Test209(t *testing.T) {
 func Test215(t *testing.T) {
 	assert.Equal(t, 5, findKthLargest([]int{3, 2, 1, 5, 6, 4}, 2))
 }
+
+func Test295(t *testing.T) {
+	mediumFinder := Constructor()
+	mediumFinder.AddNum(-1)
+	assert.Equal(t, -1.0, mediumFinder.FindMedian())
+	mediumFinder.AddNum(-2)
+	assert.Equal(t, -1.5, mediumFinder.FindMedian())
+	mediumFinder.AddNum(-3)
+	assert.Equal(t, -2.0, mediumFinder.FindMedian())
+	mediumFinder.AddNum(-4)
+	assert.Equal(t, -2.5, mediumFinder.FindMedian())
+	mediumFinder.AddNum(-5)
+	assert.Equal(t, -3.0, mediumFinder.FindMedian())
+}

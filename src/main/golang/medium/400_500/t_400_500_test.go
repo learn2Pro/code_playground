@@ -18,6 +18,23 @@ func Test424(t *testing.T) {
 }
 
 func Test449(t *testing.T) {
-	codec := Constructor()
+	codec := Constructor1()
 	assert.Equal(t, nil, codec.deserialize(codec.serialize(nil)))
+}
+
+func Test460(t *testing.T) {
+	//lfu := Constructor(2)
+	//lfu.Put(1, 1)
+	//lfu.Put(2, 2)
+	//assert.Equal(t, 1, lfu.Get(1))
+	//lfu.Put(3, 3)
+	//assert.Equal(t, -1, lfu.Get(2))
+	//assert.Equal(t, 3, lfu.Get(3))
+	//lfu.Put(4, 4)
+	//assert.Equal(t, -1, lfu.Get(1))
+	//assert.Equal(t, 3, lfu.Get(3))
+	//assert.Equal(t, 4, lfu.Get(4))
+	lfu := Constructor(0)
+	lfu.Put(0, 0)
+	assert.Equal(t, -1, lfu.Get(0))
 }

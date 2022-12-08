@@ -17,7 +17,7 @@ type Codec struct {
 	SEP string
 }
 
-func Constructor() Codec {
+func Constructor1() Codec {
 	return Codec{SEP: ","}
 }
 

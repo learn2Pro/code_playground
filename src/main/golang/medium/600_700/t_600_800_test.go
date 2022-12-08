@@ -12,3 +12,11 @@ func Test698(t *testing.T) {
 	assert.Equal(t, canPartitionKSubsets([]int{3, 3, 10, 2, 6, 5, 10, 6, 8, 3, 2, 1, 6, 10, 7, 2}, 6), false)
 	//assert.Equal(t, canPartitionKSubsets([]int{3522, 181, 521, 515, 304, 123, 2512, 312, 922, 407, 146, 1932, 4037, 2646, 3871, 269}, 5), true)
 }
+
+func Test694(t *testing.T) {
+	assert.Equal(t, 3, numDistinctIslands([][]int{{1, 1, 0, 1, 1}, {1, 0, 0, 0, 0}, {0, 0, 0, 0, 1}, {1, 1, 0, 1, 1}}))
+}
+
+func Test648(t *testing.T) {
+	assert.Equal(t, "the cat was rat by the bat", replaceWords([]string{"cat", "bat", "rat"}, "the cattle was rattled by the battery"))
+}

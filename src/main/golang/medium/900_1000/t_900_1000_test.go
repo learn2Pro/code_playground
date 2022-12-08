@@ -12,3 +12,6 @@ func Test994(t *testing.T) {
 func Test912(t *testing.T) {
 	assert.Equal(t, []int{1, 2, 3, 5}, sortArray([]int{5, 2, 3, 1}))
 }
+func Test990(t *testing.T) {
+	assert.Equal(t, false, equationsPossible([]string{"a==b", "b!=a"}))
+}

@@ -17,3 +17,35 @@ func Test153(t *testing.T) {
 func Test151(t *testing.T) {
 	assert.Equal(t, "blue is sky the", reverseWords("the sky is blue"))
 }
+
+func Test130(t *testing.T) {
+	//[["X","X","X","X"],["X","O","O","X"],["X","X","O","X"],["X","O","X","X"]]
+	//input := [][]byte{{'X', 'X', 'X', 'X'}, {'X', 'O', 'O', 'X'}, {'X', 'X', 'O', 'X'}, {'X', 'O', 'X', 'X'}}
+	//solve(input)
+	//assert.Equal(t, [][]byte{{'X', 'X', 'X', 'X'}, {'X', 'X', 'X', 'X'}, {'X', 'X', 'X', 'X'}, {'X', 'O', 'X', 'X'}}, input)
+	input := [][]byte{{'O', 'X', 'X', 'O', 'X'}, {'X', 'O', 'O', 'X', 'O'}, {'X', 'O', 'X', 'O', 'X'}, {'O', 'X', 'O', 'O', 'O'}, {'X', 'X', 'O', 'X', 'O'}}
+	solve(input)
+	assert.Equal(t, [][]byte{{'O', 'X', 'X', 'O', 'X'}, {'X', 'X', 'X', 'X', 'O'}, {'X', 'X', 'X', 'O', 'X'}, {'O', 'X', 'O', 'O', 'O'}, {'X', 'X', 'O', 'X', 'O'}}, input)
+}
+
+func Test146(t *testing.T) {
+	//lru := Constructor(2)
+	//lru.Put(1, 1)
+	//lru.Put(2, 2)
+	//assert.Equal(t, 1, lru.Get(1))
+	//lru.Put(3, 3)
+	//assert.Equal(t, -1, lru.Get(2))
+	//lru.Put(4, 4)
+	//assert.Equal(t, -1, lru.Get(1))
+	//assert.Equal(t, 3, lru.Get(3))
+	//assert.Equal(t, 4, lru.Get(4))
+	lru := Constructor(2)
+	lru.Put(2, 1)
+	lru.Put(3, 2)
+	assert.Equal(t, 2, lru.Get(3))
+	assert.Equal(t, 1, lru.Get(2))
+	lru.Put(4, 3)
+	assert.Equal(t, 1, lru.Get(2))
+	assert.Equal(t, -1, lru.Get(3))
+	assert.Equal(t, 3, lru.Get(4))
+}
