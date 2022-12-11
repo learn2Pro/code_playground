@@ -1,5 +1,6 @@
-package hard
+package lc
 
+//leetcode submit region begin(Prohibit modification and deletion)
 type mqueue []int
 
 func (t *mqueue) Len() int          { return len(*t) }
@@ -24,31 +25,12 @@ func maxSlidingWindow(nums []int, k int) (ans []int) {
 	n := len(nums)
 	for i := 0; i < n; i++ {
 		mq.push(nums[i])
-		if i >= k {
-			mq.pop(nums[i-k])
-		}
 		if i >= k-1 {
 			ans = append(ans, mq.max())
+			mq.pop(nums[i-k+1])
 		}
 	}
 	return
 }
 
-func maxSlidingWindow1(nums []int, k int) (ans []int) {
-	var mqueue []int
-	for i, num := range nums {
-		for len(mqueue) > 0 && num > mqueue[len(mqueue)-1] {
-			mqueue = mqueue[:len(mqueue)-1]
-		}
-		mqueue = append(mqueue, num)
-		if i >= k {
-			if nums[i-k] == mqueue[0] {
-				mqueue = mqueue[1:]
-			}
-		}
-		if i >= k-1 {
-			ans = append(ans, mqueue[0])
-		}
-	}
-	return
-}
+//leetcode submit region end(Prohibit modification and deletion)

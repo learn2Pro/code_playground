@@ -13,3 +13,7 @@ func Test327(t *testing.T) {
 func Test315(t *testing.T) {
 	assert.Equal(t, []int{2, 1, 1, 0}, countSmaller([]int{5, 2, 6, 1}))
 }
+
+func Test312(t *testing.T) {
+	assert.Equal(t, 167, maxCoins([]int{3, 1, 5, 8}))
+}

@@ -45,3 +45,11 @@ func Test295(t *testing.T) {
 	mediumFinder.AddNum(-5)
 	assert.Equal(t, -3.0, mediumFinder.FindMedian())
 }
+func Test232(t *testing.T) {
+	q := Constructor1()
+	q.Push(1)
+	q.Push(2)
+	assert.Equal(t, 1, q.Peek())
+	assert.Equal(t, 1, q.Pop())
+	assert.Equal(t, false, q.Empty())
+}

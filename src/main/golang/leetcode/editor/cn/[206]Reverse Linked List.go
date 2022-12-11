@@ -15,12 +15,18 @@ type ListNode struct {
  * }
  */
 func reverseList(head *ListNode) *ListNode {
-	var pre, curr, next *ListNode = nil, head, nil
-	for curr != nil {
-		next, curr.Next = curr.Next, pre
-		pre, curr = curr, next
+	//var pre, curr, next *ListNode = nil, head, nil
+	//for curr != nil {
+	//	next, curr.Next = curr.Next, pre
+	//	pre, curr = curr, next
+	//}
+	//return pre
+	if head == nil || head.Next == nil {
+		return head
 	}
-	return pre
+	last := reverseList(head.Next)
+	head.Next.Next, head.Next = head, nil
+	return last
 }
 
 //leetcode submit region end(Prohibit modification and deletion)

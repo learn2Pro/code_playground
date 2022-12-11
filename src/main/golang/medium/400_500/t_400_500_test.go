@@ -38,3 +38,11 @@ func Test460(t *testing.T) {
 	lfu.Put(0, 0)
 	assert.Equal(t, -1, lfu.Get(0))
 }
+
+func Test402(t *testing.T) {
+	assert.Equal(t, "1224", removeKdigits("12345264", 4))
+}
+
+func Test486(t *testing.T) {
+	assert.Equal(t, false, PredictTheWinner([]int{1, 5, 2}))
+}
