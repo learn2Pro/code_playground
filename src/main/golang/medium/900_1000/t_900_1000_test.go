@@ -15,3 +15,7 @@ func Test912(t *testing.T) {
 func Test990(t *testing.T) {
 	assert.Equal(t, false, equationsPossible([]string{"a==b", "b!=a"}))
 }
+
+func Test969(t *testing.T) {
+	assert.Equal(t, []int{3, 4, 2, 3, 2}, pancakeSort([]int{3, 2, 4, 1}))
+}

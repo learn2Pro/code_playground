@@ -5,6 +5,10 @@ import (
 	"testing"
 )
 
+func Test7(t *testing.T) {
+	assert.Equal(t, -2143847412, reverse(-2147483412))
+	assert.Equal(t, -321, reverse(-123))
+}
 func TestRemoveNthFromEnd(t *testing.T) {
 	l0 := &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: &ListNode{Val: 5, Next: &ListNode{Val: 2}}}}}}
 	l1 := &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 5}}}}
@@ -49,4 +53,8 @@ func Test15(t *testing.T) {
 
 func Test96(t *testing.T) {
 	assert.Equal(t, 5, numTrees(3))
+}
+
+func Test13(t *testing.T) {
+	assert.Equal(t, 1994, romanToInt("MCMXCIV"))
 }

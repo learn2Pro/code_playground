@@ -59,3 +59,7 @@ func Test395(t *testing.T) {
 	assert.Equal(t, 6, longestSubstring("ababcc", 2))
 	assert.Equal(t, 5, longestSubstring("ababbc", 2))
 }
+
+func Test392(t *testing.T) {
+	assert.Equal(t, false, isSubsequence("acb", "ahbgdc"))
+}
