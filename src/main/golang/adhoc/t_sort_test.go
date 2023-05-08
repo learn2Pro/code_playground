@@ -7,7 +7,7 @@ import (
 
 func TestQuickSort(t *testing.T) {
 	input := []int{3, 4, 2, 1}
-	QuickSort(input)
+	quickSort(input)
 	assert.True(t, assertSorted(input))
 }
 func TestQuickSort0(t *testing.T) {

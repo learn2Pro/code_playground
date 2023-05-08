@@ -1,5 +1,28 @@
 package adhoc
 
+//```go
+func quickSort(arr []int) []int {
+	if len(arr) <= 1 {
+		return arr
+	}
+	mid := arr[0]
+	head, tail := 0, len(arr)-1
+	for i := 1; i <= tail; {
+		if arr[i] > mid {
+			arr[i], arr[tail] = arr[tail], arr[i]
+			tail--
+		} else {
+			arr[i], arr[head] = arr[head], arr[i]
+			head++
+			i++
+		}
+	}
+	quickSort(arr[:head])
+	quickSort(arr[head+1:])
+	return arr
+}
+
+//```
 //=======================>Quick Sort=======================>
 func QuickSort(input []int) {
 	if len(input) <= 1 { //fast return
