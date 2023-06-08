@@ -1,0 +1,1 @@
+awk '{for(i=1;i<=NF;i++) {count[$i]++}} END{for(i in count) {print i,count[i]}}' words.txt | sort -nr -k 2
