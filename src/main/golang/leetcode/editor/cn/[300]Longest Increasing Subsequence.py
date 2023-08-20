@@ -12,22 +12,20 @@ class Solution:
         #         if nums[j] >= nums[i]: continue
         #         dp[i] = max(dp[i], dp[j] + 1)
         # return max(dp)
-        n = len(nums)
-        if n < 2: return n
-        dp = [nums[0]]
-        size = 1
-        for i in range(1, n):
-            if nums[i] > dp[-1]:
-                dp.append(nums[i])
-                size += 1
-            else:
-                l, r = 0, len(dp)
-                while l < r:
-                    mid = (l + r) // 2
-                    if dp[mid] < nums[i]:
-                        l = mid + 1
-                    else:
-                        r = mid
-                dp[l] = nums[i]
-        return size
+        piles, n = 0, len(nums)
+        top = [0] * n
+        for i in range(n):
+            poker = nums[i]
+            left, right = 0, piles
+            ## 找到>=poker的最左边的堆
+            while left < right:
+                mid = (left + right) // 2
+                if top[mid] < poker:
+                    left = mid + 1
+                else:
+                    right = mid
+            if left == piles:
+                piles += 1
+            top[left] = poker
+        return piles
 # leetcode submit region end(Prohibit modification and deletion)

@@ -1,0 +1,11 @@
+{
+    "leetcode.nodePath": "/usr/local/bin",
+    "leetcode.filePath": {
+        "default": {
+            // relative folder path
+            "folder": "",
+            // file name
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        }
+    }
+}
